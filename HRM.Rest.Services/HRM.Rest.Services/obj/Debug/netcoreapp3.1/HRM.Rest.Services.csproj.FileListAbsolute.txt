@@ -55,8 +55,10 @@ D:\practise\Stack-Hack-2.0\HRM.Rest.Services\HRM.Rest.Services\bin\Debug\netcore
 D:\practise\Stack-Hack-2.0\HRM.Rest.Services\HRM.Rest.Services\bin\Debug\netcoreapp3.1\HRM.Rest.Services.pdb
 D:\practise\Stack-Hack-2.0\HRM.Rest.Services\HRM.Rest.Services\bin\Debug\netcoreapp3.1\Humanizer.dll
 D:\practise\Stack-Hack-2.0\HRM.Rest.Services\HRM.Rest.Services\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
-D:\practise\Stack-Hack-2.0\HRM.Rest.Services\HRM.Rest.Services\obj\Debug\netcoreapp3.1\HRM.Rest.Services.csproj.CoreCompileInputs.cache
-D:\practise\Stack-Hack-2.0\HRM.Rest.Services\HRM.Rest.Services\obj\Debug\netcoreapp3.1\HRM.Rest.Services.MvcApplicationPartsAssemblyInfo.cache
 D:\practise\Stack-Hack-2.0\HRM.Rest.Services\HRM.Rest.Services\obj\Debug\netcoreapp3.1\HRM.Rest.Services.dll
 D:\practise\Stack-Hack-2.0\HRM.Rest.Services\HRM.Rest.Services\obj\Debug\netcoreapp3.1\HRM.Rest.Services.pdb
 D:\practise\Stack-Hack-2.0\HRM.Rest.Services\HRM.Rest.Services\obj\Debug\netcoreapp3.1\HRM.Rest.Services.genruntimeconfig.cache
+D:\practise\Stack-Hack-2.0\HRM.Rest.Services\HRM.Rest.Services\bin\Debug\netcoreapp3.1\JWT.dll
+D:\practise\Stack-Hack-2.0\HRM.Rest.Services\HRM.Rest.Services\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\practise\Stack-Hack-2.0\HRM.Rest.Services\HRM.Rest.Services\obj\Debug\netcoreapp3.1\HRM.Rest.Services.csproj.CoreCompileInputs.cache
+D:\practise\Stack-Hack-2.0\HRM.Rest.Services\HRM.Rest.Services\obj\Debug\netcoreapp3.1\HRM.Rest.Services.MvcApplicationPartsAssemblyInfo.cache

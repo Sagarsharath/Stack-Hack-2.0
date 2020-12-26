@@ -1,17 +1,25 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using HRM.Rest.Services.DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace HRM.DAL.Context
+namespace HRM.Rest.Services.DAL.Context
 {
     public class UserDbContext : DbContext
     {
-        public UserDbContext(DbContextOptions options) : base(options)
+        public UserDbContext() : base()
+        {
+            //OnConfiguring()
+        }
+
+
+        public UserDbContext(DbContextOptions<UserDbContext> options) : base(options)
         {
         }
 
-        DbSet<UserInfo> User_Info { get; set; }
+        public DbSet<UserInfo> User_Info { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<UserInfo>().HasKey(user => user.UserId);
