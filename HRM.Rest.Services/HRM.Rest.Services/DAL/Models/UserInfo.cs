@@ -10,7 +10,15 @@ namespace HRM.Rest.Services.DAL.Models
         public int UserId { get; set; }
         public string UserEmailId { get; set; }
         public string Password { get; set; }
-        public string Address { get; set; }
+        public string ContactNumber { get; set; }
+        public string SecondaryContactNumber { get; set; }
+        public int Compensation { get; set; }
+        public Role Role { get; set; }
+        public Department Department { get; set; }
+        public Address Address { get; set; }
+        public Address SecondaryAddress { get; set; }
+        public List<EmployeeAttendance> EmployeeAttendances { get; set; }
+        public List<EmployeeFinances> EmployeeFinances { get; set; }
 
     }
 }
