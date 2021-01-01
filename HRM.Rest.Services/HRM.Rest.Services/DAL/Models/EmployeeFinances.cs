@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace HRM.Rest.Services.DAL.Models
 {
+    [Table("EMPLOYEE_FINANCE")]
     public class EmployeeFinances
     {
         public int Id { get; set; }

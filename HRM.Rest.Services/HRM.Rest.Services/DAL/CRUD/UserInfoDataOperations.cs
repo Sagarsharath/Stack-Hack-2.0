@@ -16,6 +16,19 @@ namespace HRM.Rest.Services.DAL.CRUD
             _context = userDbContext;
         }
 
+        public bool checkIfUserExists(UserInfo userInfo)
+        {
+            var user = _context.User_Info.Any(s => s.UserEmailId == userInfo.UserEmailId);
+            if (user!=null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
 
         public UserInfo SaveUserInfo(UserInfo userInfo)
         {

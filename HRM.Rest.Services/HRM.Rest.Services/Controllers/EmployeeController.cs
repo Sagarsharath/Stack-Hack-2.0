@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 
 namespace HRM.Rest.Services.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     [Authorize]
     public class EmployeeController : ControllerBase
     {
@@ -16,6 +16,11 @@ namespace HRM.Rest.Services.Controllers
         public string Get()
         {
             return "hi";
+        }
+        [HttpGet,Route("getList")]
+        public string getList()
+        {
+            return "getList";
         }
     }
 }

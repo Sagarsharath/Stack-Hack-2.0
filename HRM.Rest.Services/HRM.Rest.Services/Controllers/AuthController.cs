@@ -39,8 +39,8 @@ namespace HRM.Rest.Services.Controllers
             {
                 return BadRequest("Invalid request");
             }
-
-            if (user.UserEmailId == "johncitizen" && user.Password == "abc@123")
+            var userInfoDataOperations = new UserInfoDBOperations(_context);
+            if (userInfoDataOperations.checkIfUserExists(user))
             {
                 var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
                 var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
@@ -48,7 +48,7 @@ namespace HRM.Rest.Services.Controllers
                 var token = new JwtSecurityToken(_config["Jwt:Issuer"],
                   _config["Jwt:Issuer"],
                   null,
-                  expires: DateTime.Now.AddMinutes(120),
+                  expires: DateTime.Now.AddMinutes(60),
                   signingCredentials: credentials);
 
                 var tokenString = new JwtSecurityTokenHandler().WriteToken(token);
@@ -76,9 +76,12 @@ namespace HRM.Rest.Services.Controllers
                 {
                     throw new Exception("Invalid Email address");
                 }
+                var userInfoDataOperations = new UserInfoDBOperations(_context);
+                if (userInfoDataOperations.checkIfUserExists(user)){
+                    throw new Exception("User already exists");
+                }
                 else
-                {
-                    var userInfoDataOperations = new UserInfoDBOperations(_context);                    
+                {                   
                     return Ok(userInfoDataOperations.SaveUserInfo(user));
                 }
             }
